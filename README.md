@@ -21,19 +21,9 @@ Abra `http://localhost:4200`.
 > O `--legacy-peer-deps` é necessário porque `@ionic/angular@8` declara peer deps
 > ligeiramente diferentes das do Angular 18.
 
-### Build de produção
 
-```bash
-npm run build
-```
 
-O resultado fica em `dist/ipe-ionic/browser` — é só publicar essa pasta em
-qualquer hospedagem estática (IIS, Apache, Nginx, Netlify, Vercel, GitHub Pages).
-Para servir como SPA, redirecione todas as rotas para `index.html`.
 
----
-
-## 2. Contas de demonstração
 
 | Perfil | E-mail | Senha | Chave de acesso |
 |---|---|---|---|
