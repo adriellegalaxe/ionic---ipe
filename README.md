@@ -2,8 +2,7 @@
 
 Versão **Ionic 8 + Angular 18** do sistema IPE (original em Flask + MySQL).
 Interface idêntica em identidade visual ao sistema original: amarelo `#FFD730`,
-laranja `#F29310`, azul escuro `#152937`, fonte Poppins, layout com sidebar + topbar,
-cards, tabelas, badges e modais.
+laranja `#F29310`, azul escuro `#152937`, fonte Poppins
 
 ---
 
@@ -12,18 +11,22 @@ cards, tabelas, badges e modais.
 Requisitos: **Node.js 18+** (recomendado 20+) e npm.
 
 ```bash
+cd ipe-ionic
 node -v
 npm -v
 npm install --legacy-peer-deps
 npm start
+```
+
 Abra `http://localhost:4200`.
 
 > O `--legacy-peer-deps` é necessário porque `@ionic/angular@8` declara peer deps
 > ligeiramente diferentes das do Angular 18.
 
 
+---
 
-
+## 2. Contas de demonstração
 
 | Perfil | E-mail | Senha | Chave de acesso |
 |---|---|---|---|
@@ -83,4 +86,7 @@ src/app/
 │   └── topbar.component.ts
 └── pages/                 # uma pasta por tela (componentes standalone)
 ```
+
+
+
 
