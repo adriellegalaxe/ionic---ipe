@@ -12,11 +12,10 @@ cards, tabelas, badges e modais.
 Requisitos: **Node.js 18+** (recomendado 20+) e npm.
 
 ```bash
-cd ipe-ionic
+node -v
+npm -v
 npm install --legacy-peer-deps
 npm start
-```
-
 Abra `http://localhost:4200`.
 
 > O `--legacy-peer-deps` é necessário porque `@ionic/angular@8` declara peer deps
