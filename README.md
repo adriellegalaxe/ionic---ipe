@@ -95,37 +95,3 @@ src/app/
 └── pages/                 # uma pasta por tela (componentes standalone)
 ```
 
-### Sobre o banco de dados
-
-Esta versão roda **100% no navegador**: o `DbService` guarda todas as tabelas em
-`localStorage` e o `ApiService` expõe métodos com a mesma semântica das rotas Flask
-(`listarInventario`, `criarChamado`, `finalizarReparo`, `resumoFinanceiro`, …).
-Os dados ficam no navegador de cada máquina — use a tela **Backup** para exportar
-JSON/SQL antes de limpar o cache ou trocar de computador.
-
-### Como reconectar o MySQL real
-
-1. Suba o backend Flask original (`app.py`) e mantenha as rotas `/api/...`.
-2. Em `src/app/core/api.service.ts`, troque o corpo de cada método por um
-   `HttpClient` correspondente, por exemplo:
-
-   ```ts
-   listarInventario(filtros?: any) {
-     return this.http.get<Patrimonio[]>('/api/inventario', { params: filtros });
-   }
-   ```
-
-3. Registre o interceptor de sessão/cookies em `src/app/app.config.ts`
-   (`auth.interceptor.ts` já existe e está pronto para uso).
-4. As telas não precisam mudar: todas consomem o `ApiService`.
-
----
-
-## 5. Estrutura de build
-
-- `angular.json` — configuração do projeto (Ionic CSS + `src/global.scss`)
-- `src/global.scss` — todo o tema IPE (cores, cards, tabelas, badges, modais, etc.)
-- `src/index.html` — fonte Poppins, logo, manifest PWA
-- `public/assets/logo.png` — logo do sistema
-
-Gerado com Ionic 8 / Angular 18 / TypeScript / SCSS / PWA.
